@@ -1,0 +1,3 @@
+{
+    "pattern_spade_title" : "Spade"
+}

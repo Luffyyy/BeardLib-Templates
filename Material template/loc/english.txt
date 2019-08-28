@@ -1,0 +1,3 @@
+{
+    "material_YOUR_MATERIAL_NAME_title" : "YOUR MATERIAL NAME"
+}

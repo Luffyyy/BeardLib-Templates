@@ -1,0 +1,11 @@
+<dynamic_object>
+    <diesel materials="units/mods/masks/msk_YOUR_MASK_NAME/msk_YOUR_MASK_NAME" orientation_object="rp_msk_the_overkill_mask"/>
+    <graphics>
+        <object enabled="true" name="g_overkill_mask" />
+    </graphics>
+</dynamic_object>
+
+<!--
+you only need to change the following:
+materials (2nd line)
+-->

@@ -1,0 +1,13 @@
+When using the templates you will usually see many files that are named something like "x_YOUR_y_NAME"; you need to edit those.
+
+1. File names
+Essentially rename every file (I recommend using some program such as Bulk Rename Utility to do this faster) into the name of your addon weapon/mask/whatever.
+Make sure you rename only the capitalized parts. For example, we have "msk_YOUR_MASK_NAME" and our mask is called "cool_mask" we rename each YOUR_MASK_NAME into that.
+The result will msk_cool_mask.
+
+2. Inside the files
+Now after all of our files are renamed, we need to update this data inside the following file types: unit, object, and material_config. Additionally, the main.xml file.
+For this, I highly recommend using a text editor (not notepad). This can be either Notepad++, Visual Studio Code, etc.
+After that, use the find tools there (Google it if you don't know how to use them) to find all cases of YOUR_MELEE_NAME and replace them with your addon name.
+So in this case, "cool_mask". 
+You can set the search directory to the root of the mod to replace the data in main.xml too.

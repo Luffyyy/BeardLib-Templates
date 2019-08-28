@@ -1,0 +1,4 @@
+{
+    "bm_msk_YOUR_MASK_NAME" : "Mask name",
+	"bm_msk_YOUR_MASK_NAME_desc" : "Mask description"
+}

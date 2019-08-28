@@ -1,0 +1,38 @@
+<table name="YOUR_MOD_NAME" author="YOUR_NAME">
+    <!--Mod name can be your folder name.-->
+    <AssetUpdates id="-1" version="1.0" provider="modworkshop"/>
+    <!--
+        Adds auto update to your mod.
+        id is the ID of your mod found here: http://modwork.shop/14924 our ID is 14924.
+        version is the version of your mod and it must be the same as the site's version. MWS updates don't care about numbers.
+        Read more about the module > https://github.com/simon-wh/PAYDAY-2-BeardLib/wiki/ModAssetModule
+    -->
+    <Localization directory="loc" default="english.txt">
+        <loc file="english.txt" language="english.txt"/>
+    </Localization>
+    <!-- For adding more languages, read > https://github.com/simon-wh/PAYDAY-2-BeardLib/wiki/LocalizationModule -->
+
+    <Mask id="YOUR_MASK_NAME" type="helmet"/>
+    <!--
+        mask id = the ID of the mask
+        unit = directory of your new weapon's .unit filename
+        texture_bundle_folder = directory path for the icons
+        global_value = for packs of mods, a global id assigned to all
+        type = the type of headwear it is. Such as mask, helmet, beard, glasses etc.
+            "glasses" = glasses
+            "beard" = beard
+            "helmet" = helmet
+        remove the "type" section to use standard straps
+        Read more here > https://github.com/simon-wh/PAYDAY-2-BeardLib/wiki/MaskModule
+    -->
+
+    <AddFiles directory="assets">    
+        <unit_tex path="units/mods/masks/msk_YOUR_MASK_NAME/msk_YOUR_MASK_NAME"/>
+        <texture path="guis/dlcs/mods/textures/pd2/blackmarket/icons/masks/YOUR_MASK_NAME"/>
+    </AddFiles>
+    <!--
+        Adds the files needed. Using shortcuts.
+        You only need to replace your_part_name with the id of your part. Make sure the directories and files are also updated.
+        Read more here > https://github.com/simon-wh/PAYDAY-2-BeardLib/wiki/AddFilesModule 
+    -->
+</table>

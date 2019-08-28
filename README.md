@@ -1,2 +1,2 @@
-# PD2-Melee-Template
-A template for creating custom melee for payday 2 using BeardLib
+# PD2-Templates
+Templates for creating custom content mods for payday 2 using BeardLib

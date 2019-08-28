@@ -38,7 +38,7 @@
 	</AddFiles>
 	<!--
         Adds the files needed. Using shortcuts.
-        You only need to replace your_part_name with the id of your part. Make sure the directories and files are also updated.
+        You only need to replace YOUR_SIGHT_NAME with the id of your part. Make sure the directories and files are also updated.
         Read more here > https://github.com/simon-wh/PAYDAY-2-BeardLib/wiki/AddFilesModule 
     -->
 </table>

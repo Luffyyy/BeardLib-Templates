@@ -1,0 +1,11 @@
+<dynamic_object>
+    <diesel orientation_object="rp_wpn_fps_mel_combat" materials="units/mods/weapons/wpn_fps_mel_YOUR_MELEE_NAME/wpn_fps_mel_YOUR_MELEE_NAME" />
+    <graphics>
+        <object enabled="true" name="g_g" />
+    </graphics>
+</dynamic_object>
+
+<!--
+you only need to change the following:
+materials (2nd line)
+-->

@@ -1,0 +1,33 @@
+<table name="YOUR_MOD_NAME" author="YOUR_NAME" min_lib_ver="3.38">
+    <!--Mod name can be your folder name. -->
+    <AssetUpdates id="-1" version="1.0" provider="modworkshop"/>
+    <!--
+        Adds auto update to your mod.
+        id is the ID of your mod found here: http://modwork.shop/14924 our ID is 14924.
+        version is the version of your mod and it must be the same as the site's version. MWS updates don't care about numbers.
+        Read more about the module > https://github.com/simon-wh/PAYDAY-2-BeardLib/wiki/ModAssetModule
+    -->
+    <Localization directory="loc" default="english.txt">
+        <loc file="english.txt" language="english.txt"/>
+    </Localization>
+    <!-- For adding more languages, read > https://github.com/simon-wh/PAYDAY-2-BeardLib/wiki/LocalizationModule -->
+
+    <Melee id="YOUR_MELEE_NAME" based_on="shovel"/>
+    <!--
+        Melee id = the ID of the melee weapons
+        based on = the original weapon that your new one borrows it's animations from
+        unit = directory of your new weapon's .unit filename (ingame, optional)
+        global_value = for packs of mods, a global id assigned to all
+        Read more here > https://github.com/simon-wh/PAYDAY-2-BeardLib/wiki/MeleeModule
+    -->
+    
+    <AddFiles directory="assets">
+        <unit_tex path="units/mods/weapons/wpn_fps_mel_YOUR_MELEE_NAME/wpn_fps_mel_YOUR_MELEE_NAME"/>
+        <texture path="guis/dlcs/mods/textures/pd2/blackmarket/icons/melee_weapons/YOUR_MELEE_NAME"/>
+    </AddFiles>
+    <!--
+        Adds the files needed. Using shortcuts.
+        You only need to replace YOUR_MELEE_NAME with the id of your melee. Make sure the directories and files are also updated.
+        Read more here > https://github.com/simon-wh/PAYDAY-2-BeardLib/wiki/AddFilesModule 
+    -->
+</table>

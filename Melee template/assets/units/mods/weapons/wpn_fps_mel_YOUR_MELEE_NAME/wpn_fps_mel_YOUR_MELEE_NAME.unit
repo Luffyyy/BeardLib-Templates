@@ -1,7 +1,7 @@
 <unit type="wpn" slot="1" >
     <object file="units/mods/weapons/wpn_fps_mel_YOUR_MELEE_NAME/wpn_fps_mel_YOUR_MELEE_NAME" />
 	<dependencies>
-		<depends_on bnk="soundbanks/melee_suitcase"/>
+		<depends_on bnk="soundbanks/melee_shovel"/>
 	</dependencies>
     <extensions>
         <extension class="ScriptUnitData" name="unit_data" />
@@ -11,4 +11,5 @@
 <!--
 you only need to change the following:
 object (2nd line)
+bnk (4th line, change to the sound you want your melee to have)
 -->

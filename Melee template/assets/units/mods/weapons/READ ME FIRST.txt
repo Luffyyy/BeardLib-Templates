@@ -1,7 +1,7 @@
 When using the templates you will usually see many files that are named something like "x_YOUR_y_NAME"; you need to edit those.
 
 1. File names
-Essentially rename every file (I recommend using a program such as rename utility to make this faster) into the name of your addon weapon/mask/whatever.
+Essentially rename every file (I recommend using some program such as rename utility to do this faster) into the name of your addon weapon/mask/whatever.
 Make sure you rename only the capitalized parts. For example, we have "wpn_fps_mel_YOUR_MELEE_NAME" and our melee is called "shovel_improved" we rename each YOUR_MELEE_NAME into that.
 The result will wpn_fps_mel_shovel_improved.
 

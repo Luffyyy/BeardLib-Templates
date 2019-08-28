@@ -1,0 +1,10 @@
+<dynamic_object>
+    <diesel orientation_object="rp_wpn_fps_upg_o_cs" materials="units/mods/weapons/wpn_upg_o_YOUR_SIGHT_NAME/wpn_upg_o_YOUR_SIGHT_NAME" />
+    <graphics>
+        <object enabled="true" name="g_reddot" />
+        <object enabled="false" name="g_gfx_lens" />
+        <object enabled="false" name="g_gfx_lens_2" />
+        <object enabled="false" name="g_gfx_lens_3" />
+        <object enabled="true" name="g_aimpoint_cs" />
+    </graphics>
+</dynamic_object>

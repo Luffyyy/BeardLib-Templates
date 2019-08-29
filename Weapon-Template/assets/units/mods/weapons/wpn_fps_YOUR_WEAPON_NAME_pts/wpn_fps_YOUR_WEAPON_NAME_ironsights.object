@@ -1,0 +1,7 @@
+<dynamic_object>
+    <diesel orientation_object="rp_wpn_fps_m4_uupg_o_flipup" materials="units/mods/weapons/wpn_fps_YOUR_WEAPON_NAME_pts/wpn_fps_YOUR_WEAPON_NAME_ironsights" />
+  <graphics>
+        <object  name="g_flipup" enabled="true" />
+        <object  name="g_no_blurr" enabled="true" />
+  </graphics>
+</dynamic_object>

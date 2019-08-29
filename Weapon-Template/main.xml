@@ -1,0 +1,188 @@
+<table name="YOUR_MOD_NAME" author="YOUR_NAME" min_lib_ver="3.38">
+    <!--Mod name can be your folder name. You should define it; so other mods can easily find your mod. -->
+    <AssetUpdates id="-1" version="1.0" provider="modworkshop"/>
+    <!--
+        Adds auto update to your mod.
+        id is the ID of your mod found here: http://modwork.shop/14924 our ID is 14924.
+        version is the version of your mod and it must be the same as the site's version. MWS updates don't care about numbers.
+        Read more about the module > https://github.com/simon-wh/PAYDAY-2-BeardLib/wiki/ModAssetModule
+    -->
+    <Localization directory="loc" default="english.txt">
+		<loc file="english.txt" language="english.txt"/>
+    </Localization>
+    <!-- For adding more languages, read > https://github.com/simon-wh/PAYDAY-2-BeardLib/wiki/LocalizationModule -->
+	<WeaponMod id="wpn_fps_YOUR_WEAPON_NAME_barrel" based_on="wpn_fps_m4_uupg_b_medium_vanilla" type="barrel" wpn_pts="wpn_fps_YOUR_WEAPON_NAME" hidden="true" ver="2"/>
+	<WeaponMod id="wpn_fps_YOUR_WEAPON_NAME_body" based_on="wpn_fps_m4_lower_reciever" type="lower_reciever" wpn_pts="wpn_fps_YOUR_WEAPON_NAME" hidden="true" ver="2"/>
+	<WeaponMod id="wpn_fps_YOUR_WEAPON_NAME_flashhider" based_on="wpn_fps_ass_contraband_ns_standard" type="barrel_ext" wpn_pts="wpn_fps_YOUR_WEAPON_NAME" hidden="true" ver="2"/>
+	<WeaponMod id="wpn_fps_YOUR_WEAPON_NAME_grip" based_on="wpn_fps_upg_m4_g_standard_vanilla" type="grip" wpn_pts="wpn_fps_YOUR_WEAPON_NAME" hidden="true" ver="2"/>
+	<WeaponMod id="wpn_fps_YOUR_WEAPON_NAME_ironsights" based_on="wpn_fps_m4_uupg_o_flipup" type="sight" wpn_pts="wpn_fps_YOUR_WEAPON_NAME" hidden="true" ver="2"/>
+	<WeaponMod id="wpn_fps_YOUR_WEAPON_NAME_magazine" based_on="wpn_fps_m4_uupg_m_std_vanilla" type="magazine" wpn_pts="wpn_fps_YOUR_WEAPON_NAME" hidden="true" ver="2"/>
+	<WeaponMod id="wpn_fps_YOUR_WEAPON_NAME_stock" based_on="wpn_fps_m16_s_solid" type="stock" wpn_pts="wpn_fps_YOUR_WEAPON_NAME" hidden="true" ver="2"/>
+	<WeaponMod id="wpn_fps_YOUR_WEAPON_NAME_stock_adapter" based_on="wpn_fps_upg_m4_s_adapter" type="stock_adapter" unit="units/payday2/weapons/wpn_upg_dummy/wpn_upg_dummy" hidden="true" ver="2"/>
+	<!--
+		Base attachments used by weapon.
+
+		For base parts data you need define:
+		id - Unique ID of attachment.
+		based_on - ID of attachment that data will be copied from.
+		type - Type of attachment.
+		unit - Optional path to attachment unit file. Uses based on unit if not defined (unless guess_unit is on)
+		guess_unit - Guesses the unit for you. The resulted unit will be "units/mods/weapons/id/id Defaults to true with ver=2
+		wpn_pts - Like guess_unit but receives a weapon factory ID to put the parts in. The unit will be in: units/mods/weapons/wpn_pts_pts/id 
+		hidden - Must be set to true for base parts.
+		ver - version value for the module. Leave as 2. See wiki for more information.
+		
+		Read more here https://github.com/simon-wh/PAYDAY-2-BeardLib/wiki/WeaponModModule
+	-->
+	<WeaponMod id="wpn_fps_YOUR_WEAPON_NAME_barrel_short" based_on="wpn_fps_m4_uupg_b_short" type="barrel" wpn_pts="wpn_fps_YOUR_WEAPON_NAME" ver="2"/>
+	<WeaponMod id="wpn_fps_YOUR_WEAPON_NAME_grip_magpul_moe" based_on="wpn_fps_upg_m4_g_ergo" type="grip" wpn_pts="wpn_fps_YOUR_WEAPON_NAME" ver="2">
+		<stats recoil="2"/>
+	</WeaponMod>
+	<WeaponMod id="wpn_fps_YOUR_WEAPON_NAME_stock_hk416c" based_on="wpn_fps_m16_s_solid" type="stock" wpn_pts="wpn_fps_YOUR_WEAPON_NAME" ver="2">
+		<stats recoil="-2" concealment="5"/>
+	</WeaponMod>
+<!--
+	Additional custom attachments used by weapon.
+-->
+	<Weapon>
+		<weapon id="YOUR_WEAPON_NAME" based_on="new_m4" weapon_hold="m4" ammo_pickup="3">
+			<stats damage="56" spread="17" spread_moving="15" recoil="16" concealment="15"/>
+			<fire_mode_data fire_rate="0.075"/>
+			<sounds fire="tecci_fire_single" fire_single="tecci_fire_single" fire_auto="tecci_fire" stop_fire="tecci_stop"/>
+			<animations reload_name_id="new_m4"/>
+		</weapon>
+	<!--
+		General custom weapon data:
+		unlock_level - Required reputation level to unlock.
+		id - Unique ID of weapon.
+		based_on - ID of weapon base that custom weapons will be based on.
+		weapon_hold - Optional parameter that is only needed if custom weapon is using incorrect hold animation - In most cases ID is same as used in based_on.
+		texture_bundle_folder - Folder containing GUI icons for weapon (Not required to change this ID).
+		global_value - Unique global_value ID used by custom weapon.
+		animations - Animation group used by custom weapon:
+			reload_name_id - ID of reload animation - ID is same as used in "based_on"
+
+		Read more here https://github.com/simon-wh/PAYDAY-2-BeardLib/wiki/WeaponModule#weapon-id-
+	-->
+		<factory stock_adapter="wpn_fps_YOUR_WEAPON_NAME_stock_adapter">
+	<!--
+		WeaponFactoryTweakData of weapon:
+		id - Unique factory ID of weapon (optional, defaults to wpn_fps + weapon id)
+		unit - Path to weapon base unit (optional, defaults to units/mods/factory_id/factory_id if guess_unit is not set to false)
+		stock_adapter - Optional parameter only needed if weapon will be using AR-15 Stocks. ID = Attachment that use "stock_adapter" type and will be added to connect weapon model with AR-15 stock models.
+	-->
+			<animations reload="reload" fire="recoil" fire_steelsight="recoil" reload_not_empty="reload_not_empty" magazine_empty="last_recoil"/>
+			<optional_types>
+				<value_node value="barrel_ext"/>
+				<value_node value="gadget"/>
+				<value_node value="sight"/>
+			</optional_types>
+			<adds/>
+			<override/>
+			<default_blueprint>
+				<value_node value="wpn_fps_YOUR_WEAPON_NAME_barrel"/>
+				<value_node value="wpn_fps_YOUR_WEAPON_NAME_body"/>
+				<value_node value="wpn_fps_YOUR_WEAPON_NAME_flashhider"/>
+				<value_node value="wpn_fps_YOUR_WEAPON_NAME_grip"/>
+				<value_node value="wpn_fps_YOUR_WEAPON_NAME_ironsights"/>
+				<value_node value="wpn_fps_YOUR_WEAPON_NAME_magazine"/>
+				<value_node value="wpn_fps_YOUR_WEAPON_NAME_stock"/>
+			</default_blueprint>
+			<uses_parts>
+				<value_node value="wpn_fps_YOUR_WEAPON_NAME_barrel"/>
+				<value_node value="wpn_fps_YOUR_WEAPON_NAME_body"/>
+				<value_node value="wpn_fps_YOUR_WEAPON_NAME_flashhider"/>
+				<value_node value="wpn_fps_YOUR_WEAPON_NAME_grip"/>
+				<value_node value="wpn_fps_YOUR_WEAPON_NAME_ironsights"/>
+				<value_node value="wpn_fps_YOUR_WEAPON_NAME_magazine"/>
+				<value_node value="wpn_fps_YOUR_WEAPON_NAME_stock"/>
+
+				<value_node value="wpn_fps_YOUR_WEAPON_NAME_barrel_short"/>
+				<value_node value="wpn_fps_YOUR_WEAPON_NAME_barrel_dmr"/>
+				<value_node value="wpn_fps_YOUR_WEAPON_NAME_charginghandle_fortis"/>
+				<value_node value="wpn_fps_YOUR_WEAPON_NAME_grip_magpul_moe"/>
+				<value_node value="wpn_fps_YOUR_WEAPON_NAME_mag_dual"/>
+				<value_node value="wpn_fps_YOUR_WEAPON_NAME_stock_hk416c"/>
+				<value_node value="wpn_fps_YOUR_WEAPON_NAME_stock_solid"/>
+
+				<value_node value="wpn_fps_upg_ns_ass_smg_large"/>
+				<value_node value="wpn_fps_upg_ns_ass_smg_medium"/>
+				<value_node value="wpn_fps_upg_ns_ass_smg_small"/>
+				<value_node value="wpn_fps_upg_ns_ass_smg_firepig"/>
+				<value_node value="wpn_fps_upg_ns_ass_smg_stubby"/>
+				<value_node value="wpn_fps_upg_ns_ass_smg_tank"/>
+				<value_node value="wpn_fps_upg_ass_ns_jprifles"/>
+				<value_node value="wpn_fps_upg_ass_ns_linear"/>
+				<value_node value="wpn_fps_upg_ass_ns_surefire"/>
+				<value_node value="wpn_fps_upg_ass_ns_battle"/>
+				<value_node value="wpn_fps_upg_fl_ass_smg_sho_peqbox"/>
+				<value_node value="wpn_fps_upg_fl_ass_smg_sho_surefire"/>
+				<value_node value="wpn_fps_upg_fl_ass_peq15"/>
+				<value_node value="wpn_fps_upg_fl_ass_laser"/>
+				<value_node value="wpn_fps_upg_fl_ass_utg"/>
+				<value_node value="wpn_fps_upg_i_singlefire"/>
+				<value_node value="wpn_fps_upg_i_autofire"/>
+				<value_node value="wpn_fps_upg_o_specter"/>
+				<value_node value="wpn_fps_upg_o_aimpoint"/>
+				<value_node value="wpn_fps_upg_o_docter"/>
+				<value_node value="wpn_fps_upg_o_eotech"/>
+				<value_node value="wpn_fps_upg_o_t1micro"/>
+				<value_node value="wpn_fps_upg_o_cmore"/>
+				<value_node value="wpn_fps_upg_o_aimpoint_2"/>
+				<value_node value="wpn_fps_upg_o_acog"/>
+				<value_node value="wpn_fps_upg_o_eotech_xps"/>
+				<value_node value="wpn_fps_upg_o_reflex"/>
+				<value_node value="wpn_fps_upg_o_rx01"/>
+				<value_node value="wpn_fps_upg_o_rx30"/>
+				<value_node value="wpn_fps_upg_o_cs"/>
+				<value_node value="wpn_fps_upg_o_45rds"/>
+				<value_node value="wpn_fps_upg_o_spot"/>
+				<value_node value="wpn_fps_upg_o_xpsg33_magnifier"/>
+				<value_node value="wpn_fps_upg_o_45rds_v2"/>
+			</uses_parts>
+		</factory>
+	<!--
+		animations - Some weapons bases use own animations table if custom weapon is missing animations check if chosen base has animations table in the weaponfactorytweakdata script.
+		optional_types - Types used by weapon (Currently it's not used by the game but must be defined). Each value is a string in a value_node.
+		adds - Adds additional attachments to specific attachment - like rails for sights or gadgets. 
+		Contains tables that have their meta as weapon mod ids and inside of these tables are the parts you want to add when using that part
+		override - Allows to override data of attachments used by weapon. 
+		Contains tables that have their meta as weapon mod ids and the values of the table contains any data of a weapon mod you wish to change like unit, a_obj,etc
+		default_blueprint - List of attachments IDs (all in a value_node) the weapon has by default. Any changes to this list require to sell old gun and repurchase it.
+		in inventory due this fact any changes to this list require to sell old gun and repurchase it.
+		uses_parts - IDs of the parts that the gun uses. You must also include the default_blueprint parts!
+		read more here https://github.com/simon-wh/PAYDAY-2-BeardLib/wiki/WeaponModule#factory-id-
+	-->
+		<stance/>
+	<!--Read about stances here https://github.com/simon-wh/PAYDAY-2-BeardLib/wiki/WeaponModule#stance-->
+	</Weapon>
+	<AddFiles directory="assets">
+		<df_nm path="units/mods/weapons/wpn_fps_YOUR_WEAPON_NAME_pts/bullet556"/>
+		<df_nm path="units/mods/weapons/wpn_fps_YOUR_WEAPON_NAME_pts/hk416"/>
+		<df_nm path="units/mods/weapons/wpn_fps_YOUR_WEAPON_NAME_pts/hk416c_stock"/>
+		<df_nm path="units/mods/weapons/wpn_fps_YOUR_WEAPON_NAME_pts/magpul_moe"/>
+		<df_nm path="units/mods/weapons/wpn_fps_YOUR_WEAPON_NAME_pts/sights"/>
+
+		<unit_npc path="units/mods/weapons/wpn_fps_YOUR_WEAPON_NAME/wpn_fps_YOUR_WEAPON_NAME"/>
+		<unit_mat_thq path="units/mods/weapons/wpn_fps_YOUR_WEAPON_NAME_pts/wpn_fps_YOUR_WEAPON_NAME_barrel"/>
+		<unit_mat_thq path="units/mods/weapons/wpn_fps_YOUR_WEAPON_NAME_pts/wpn_fps_YOUR_WEAPON_NAME_body"/>
+		<unit_mat_thq path="units/mods/weapons/wpn_fps_YOUR_WEAPON_NAME_pts/wpn_fps_YOUR_WEAPON_NAME_flashhider"/>
+		<unit_mat_thq path="units/mods/weapons/wpn_fps_YOUR_WEAPON_NAME_pts/wpn_fps_YOUR_WEAPON_NAME_grip"/>
+		<unit_mat_thq path="units/mods/weapons/wpn_fps_YOUR_WEAPON_NAME_pts/wpn_fps_YOUR_WEAPON_NAME_ironsights"/>
+		<unit_mat_thq path="units/mods/weapons/wpn_fps_YOUR_WEAPON_NAME_pts/wpn_fps_YOUR_WEAPON_NAME_magazine"/>
+		<unit_mat_thq path="units/mods/weapons/wpn_fps_YOUR_WEAPON_NAME_pts/wpn_fps_YOUR_WEAPON_NAME_stock"/>
+		<unit_mat_thq path="units/mods/weapons/wpn_fps_YOUR_WEAPON_NAME_pts/wpn_fps_YOUR_WEAPON_NAME_barrel_short"/>
+		<unit_mat_thq path="units/mods/weapons/wpn_fps_YOUR_WEAPON_NAME_pts/wpn_fps_YOUR_WEAPON_NAME_grip_magpul_moe"/>
+		<unit_mat_thq path="units/mods/weapons/wpn_fps_YOUR_WEAPON_NAME_pts/wpn_fps_YOUR_WEAPON_NAME_stock_hk416c"/>
+
+		<texture path="guis/dlcs/mods/textures/pd2/blackmarket/icons/mods/wpn_fps_YOUR_WEAPON_NAME_barrel_short"/>
+		<texture path="guis/dlcs/mods/textures/pd2/blackmarket/icons/mods/wpn_fps_YOUR_WEAPON_NAME_grip_magpul_moe"/>
+		<texture path="guis/dlcs/mods/textures/pd2/blackmarket/icons/mods/wpn_fps_YOUR_WEAPON_NAME_stock_hk416c"/>
+		<texture path="guis/dlcs/mods/textures/pd2/blackmarket/icons/weapons/YOUR_WEAPON_NAME"/>
+	</AddFiles>
+	<!--
+        Adds the files needed. Using shortcuts.
+        You only need to replace your_part_name with the id of your part. Make sure the directories and files are also updated.
+        Read more here > https://github.com/simon-wh/PAYDAY-2-BeardLib/wiki/AddFilesModule 
+    -->
+</table>

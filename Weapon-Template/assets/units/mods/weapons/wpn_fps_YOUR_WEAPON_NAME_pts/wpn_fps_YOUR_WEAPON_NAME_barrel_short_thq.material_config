@@ -1,0 +1,6 @@
+<materials version="3" group="weapon_group">
+    <material name="mtr_b_draco" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP:NORMALMAP_UV1" version="2">
+        <diffuse_texture file="units/mods/weapons/wpn_fps_YOUR_WEAPON_NAME_pts/hk416_df" mip="1"/>
+        <bump_normal_texture file="units/mods/weapons/wpn_fps_YOUR_WEAPON_NAME_pts/hk416_nm" mip="1"/>
+    </material>
+</materials>

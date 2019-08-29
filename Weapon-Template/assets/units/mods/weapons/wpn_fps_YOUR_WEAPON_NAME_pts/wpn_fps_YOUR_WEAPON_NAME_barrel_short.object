@@ -1,0 +1,6 @@
+<dynamic_object>
+    <diesel orientation_object="rp_wpn_fps_upg_ak_b_draco" materials="units/mods/weapons/wpn_fps_YOUR_WEAPON_NAME_pts/wpn_fps_YOUR_WEAPON_NAME_barrel_short" />
+    <graphics>
+        <object enabled="true" name="g_g" />
+    </graphics>
+</dynamic_object>

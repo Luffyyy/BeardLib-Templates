@@ -1,4 +1,4 @@
-<table name="YOUR_MOD_NAME" author="YOUR_NAME">
+<mod name="YOUR_MOD_NAME" author="YOUR_NAME" min_lib_ver="3.38">
     <!--Mod name can be your folder name.-->
     <AssetUpdates id="-1" version="1.0" provider="modworkshop"/>
     <!--
@@ -35,4 +35,4 @@
         You only need to replace your_part_name with the id of your part. Make sure the directories and files are also updated.
         Read more here > https://github.com/simon-wh/PAYDAY-2-BeardLib/wiki/AddFilesModule 
     -->
-</table>
+</mod>

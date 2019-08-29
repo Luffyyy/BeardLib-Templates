@@ -1,0 +1,6 @@
+{
+	"YOUR_MOD_NAMEOptionsButtonTitleID" : "YOUR_MOD_NAME options",
+	"YOUR_MOD_NAMEOptionsButtonDescID" : "",
+    "YOUR_MOD_NAMEExampleOptionTitleID" : "A toggle!",
+    "YOUR_MOD_NAMEExampleOptionDescID" : "This toggle does something.."
+}

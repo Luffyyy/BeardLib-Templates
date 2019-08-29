@@ -1,2 +1,2 @@
 # PD2-Templates
-Templates for creating custom content mods for payday 2 using BeardLib
+Templates for creating bunch of mods using the power of BeardLib!

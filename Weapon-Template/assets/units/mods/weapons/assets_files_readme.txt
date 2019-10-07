@@ -1,5 +1,5 @@
 Custom attachments assets:
-To add custom attachment for custom model that you have exported to model already you will need reuse other files that of this model is using in PD2.  After extracting files by using one of tools* you will need these 5 files:
+To add custom attachment for custom model that you have exported to model already you will need reuse other files that of this model is using in PD2.  After extracting files by using one of tools you will need these 5 files:
 
 .cooked_physics			- In case of weapons it don't contains any physics data but be present.
 .material_config		- Textures and materials used for weapon.

@@ -1,5 +1,5 @@
 Custom weapon base:
-To create base for custom weapon you need reuse weapon base files from PD2 that custom weapon will be using. After extracting files by using one of tools* you will need these 5 files:
+To create base for custom weapon you need reuse weapon base files from PD2 that custom weapon will be using. After extracting files by using one of tools you will need these 5 files:
 
 .cooked_physics		- In case of weapons it don't contains any physics data but be present.
 .model				- Contains data about bones, animations and other undiscovered data.
@@ -51,5 +51,3 @@ For example lets breakdown template unit files and how they are configured corre
 		</extension>
     </extensions>
 </unit>
-
-* - See Links.html file.

@@ -1,27 +1,28 @@
 <mod name="YOUR_MOD_NAME" author="YOUR_NAME" min_lib_ver="3.38">
-    <!--Mod name can be your folder name. -->
-    <AssetUpdates id="-1" version="1.0" provider="modworkshop"/>
-    <!--
-        Adds auto update to your mod.
-        id is the ID of your mod found here: http://modwork.shop/14924 our ID is 14924.
-        version is the version of your mod and it must be the same as the site's version. MWS updates don't care about numbers.
-        Read more about the module > https://github.com/simon-wh/PAYDAY-2-BeardLib/wiki/ModAssetModule
-    -->
-    <Localization directory="loc" default="english.txt">
-        <loc file="english.txt" language="english.txt"/>
-    </Localization>
-    <!-- For adding more languages, read > https://github.com/simon-wh/PAYDAY-2-BeardLib/wiki/LocalizationModule -->
+	<!--Mod name can be your folder name. -->
+	<AssetUpdates id="-1" version="1.0" provider="modworkshop"/>
+	<!--
+		Adds auto update to your mod.
+		id is the ID of your mod found here: http://modwork.shop/14924 our ID is 14924.
+		version is the version of your mod and it must be the same as the site's version. MWS updates don't care about numbers.
+		Read more about the module > https://github.com/simon-wh/PAYDAY-2-BeardLib/wiki/ModAssetModule
+	-->
+	<Localization directory="loc" default="english.txt">
+		<loc file="english.txt" language="english.txt"/>
+	</Localization>
+	<!-- For adding more languages, read > https://github.com/simon-wh/PAYDAY-2-BeardLib/wiki/LocalizationModule -->
 
-	<WeaponMod id="wpn_upg_o_YOUR_SIGHT_NAME" based_on="wpn_fps_upg_o_cs" type="sight" ver="2">
-	    <!--
-            based_on = the ID in which your weapon mod is similar to.
-            id = the ID of your new weapon mod, should be similar to the name used for the weapon mod icon.
-            unit = the directory of your part's unit (Optional, since we are using ver="2" it will automatically guess the unit).
-		   	guess_unit = Should the unit be guessed? Gussed unit will be: units/mods/weapons/wpn_part_YOUR_SIGHT_NAME/wpn_part_YOUR_SIGHT_NAME. Defaults to true with ver="2".
-            type = the type of your weapon piece, body, barrel, etc
-        -->
+	<WeaponMod id="wpn_upg_o_YOUR_SIGHT_NAME" based_on="wpn_fps_upg_o_eotech" type="sight" ver="2">
+		<!--
+			based_on = the ID in which your weapon mod is similar to.
+			id = the ID of your new weapon mod, should be similar to the name used for the weapon mod icon.
+			unit = the directory of your part's unit (Optional, since we are using ver="2" it will automatically guess the unit).
+			guess_unit = Should the unit be guessed? Gussed unit will be: units/mods/weapons/wpn_part_YOUR_SIGHT_NAME/wpn_part_YOUR_SIGHT_NAME. Defaults to true with ver="2".
+			type = the type of your weapon piece, body, barrel, etc
+		-->
 		<weapons>
-			<value_node value="wpn_fps_ass_hk416"/>
+			<value_node value="wpn_fps_ass_m14"/>
+			<value_node value="wpn_fps_ass_galil"/>
 			<!-- 
 				Each value_node node defines a weapon (with value being the factory ID) this part should be added to. 
 				If the based_on part already adds to these weapons you don't need to define the weapons.
@@ -33,12 +34,15 @@
 	<!-- What adds the part. Read more here > https://github.com/simon-wh/PAYDAY-2-BeardLib/wiki/WeaponModModule -->
 
 	<AddFiles directory="assets">
-		<unit_cc path="units/mods/weapons/wpn_upg_o_YOUR_SIGHT_NAME/wpn_upg_o_YOUR_SIGHT_NAME"/>
+		<df_nm_cc path="units/mods/weapons/wpn_upg_o_YOUR_SIGHT_NAME/docter"/>
+		<df_nm_cc path="units/mods/weapons/wpn_upg_o_YOUR_SIGHT_NAME/mount"/>
+
+		<unit_mat_cc path="units/mods/weapons/wpn_upg_o_YOUR_SIGHT_NAME/wpn_upg_o_YOUR_SIGHT_NAME"/>
 		<texture path="guis/dlcs/mods/textures/pd2/blackmarket/icons/mods/wpn_upg_o_YOUR_SIGHT_NAME"/>
 	</AddFiles>
 	<!--
-        Adds the files needed. Using shortcuts.
-        You only need to replace YOUR_SIGHT_NAME with the id of your part. Make sure the directories and files are also updated.
-        Read more here > https://github.com/simon-wh/PAYDAY-2-BeardLib/wiki/AddFilesModule 
-    -->
+		Adds the files needed. Using shortcuts.
+		You only need to replace YOUR_SIGHT_NAME with the id of your part. Make sure the directories and files are also updated.
+		Read more here > https://github.com/simon-wh/PAYDAY-2-BeardLib/wiki/AddFilesModule 
+	-->
 </mod>

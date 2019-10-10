@@ -1,7 +1,5 @@
 {
-    "bm_w_YOUR_WEAPON_NAME" : "Weapon name",
-    "bm_w_YOUR_WEAPON_NAME_desc" : "Weapon description",
-    "bm_wp_wpn_fps_YOUR_WEAPON_NAME_barrel_short" : "Short Barrel",
-    "bm_wp_wpn_fps_YOUR_WEAPON_NAME_grip_magpul_moe" : "Magpul MOE Grip",
-    "bm_wp_wpn_fps_YOUR_WEAPON_NAME_stock_hk416c" : "HK416C Stock"
+	"bm_w_YOUR_WEAPON_NAME" : "Weapon name",
+	"bm_wp_wpn_fps_YOUR_WEAPON_NAME_barrel_short" : "Short Barrel",
+	"bm_wp_wpn_fps_YOUR_WEAPON_NAME_stock_hk416c" : "HK416C Stock"
 }

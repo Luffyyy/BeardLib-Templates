@@ -12,24 +12,16 @@
 	</Localization>
 	<!-- For adding more languages, read > https://github.com/simon-wh/PAYDAY-2-BeardLib/wiki/LocalizationModule -->
 
-	<WeaponMod id="wpn_upg_o_YOUR_SIGHT_NAME" based_on="wpn_fps_upg_o_eotech" type="sight" ver="2">
+	<WeaponMod id="wpn_upg_o_YOUR_SIGHT_NAME" based_on="wpn_fps_upg_o_eotech" inherit_weapons="true" inherit_adds="true" inherit_override="true" inherit_parts_override="true" inherit_parts_forbids="true" type="sight" ver="2">
 		<!--
 			based_on = the ID in which your weapon mod is similar to.
+			inherit_ = Inherits various parts of attachment data using based_on ID.
 			id = the ID of your new weapon mod, should be similar to the name used for the weapon mod icon.
 			unit = the directory of your part's unit (Optional, since we are using ver="2" it will automatically guess the unit).
 			guess_unit = Should the unit be guessed? Gussed unit will be: units/mods/weapons/wpn_part_YOUR_SIGHT_NAME/wpn_part_YOUR_SIGHT_NAME. Defaults to true with ver="2".
 			type = the type of your weapon piece, body, barrel, etc
 		-->
-		<weapons>
-			<value_node value="wpn_fps_ass_m14"/>
-			<value_node value="wpn_fps_ass_galil"/>
-			<!-- 
-				Each value_node node defines a weapon (with value being the factory ID) this part should be added to. 
-				If the based_on part already adds to these weapons you don't need to define the weapons.
-				There's more inheritance going on in the background. But to disable the weapons inheritance add inherit_weapons=false
-				Read more in the wiki linked below.
-			-->
-		</weapons>
+
 	</WeaponMod>
 	<!-- What adds the part. Read more here > https://github.com/simon-wh/PAYDAY-2-BeardLib/wiki/WeaponModModule -->
 

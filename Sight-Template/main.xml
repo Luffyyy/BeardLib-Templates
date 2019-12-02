@@ -8,7 +8,7 @@
 		Read more about the module > https://github.com/simon-wh/PAYDAY-2-BeardLib/wiki/ModAssetModule
 	-->
 	<Localization directory="loc" default="english.txt">
-		<loc file="english.txt" language="english.txt"/>
+		<loc file="english.txt" language="english"/>
 	</Localization>
 	<!-- For adding more languages, read > https://github.com/simon-wh/PAYDAY-2-BeardLib/wiki/LocalizationModule -->
 	<WeaponMod id="wpn_upg_o_YOUR_SIGHT_NAME" based_on="wpn_fps_upg_o_eotech" type="sight" inherit_weapons="true" inherit_adds="true" inherit_override="true" inherit_parts_override="true" inherit_parts_forbids="true" ver="2">

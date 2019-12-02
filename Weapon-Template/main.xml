@@ -8,7 +8,7 @@
 		Read more about the module > https://github.com/simon-wh/PAYDAY-2-BeardLib/wiki/ModAssetModule
 	-->
 	<Localization directory="loc" default="english.txt">
-		<loc file="english.txt" language="english.txt"/>
+		<loc file="english.txt" language="english"/>
 	</Localization>
 	<!-- For adding more languages, read > https://github.com/simon-wh/PAYDAY-2-BeardLib/wiki/LocalizationModule -->
 	<WeaponMod id="wpn_fps_YOUR_WEAPON_NAME_barrel" based_on="wpn_fps_m4_uupg_b_medium_vanilla" type="barrel" wpn_pts="wpn_fps_YOUR_WEAPON_NAME" hidden="true" ver="2"/>

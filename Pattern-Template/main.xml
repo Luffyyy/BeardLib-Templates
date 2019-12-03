@@ -8,7 +8,7 @@
         Read more about the module > https://github.com/simon-wh/PAYDAY-2-BeardLib/wiki/ModAssetModule
     -->
     <Localization directory="loc" default="english.txt">
-        <loc file="english.txt" language="english.txt"/>
+        <loc file="english.txt" language="english"/>
     </Localization>
     <!-- For adding more languages, read > https://github.com/simon-wh/PAYDAY-2-BeardLib/wiki/LocalizationModule -->
       

@@ -1,0 +1,15 @@
+<mod name="YOUR_MOD_NAME" author="YOUR_NAME" min_lib_ver="4.0">
+    <!--Mod name can be your folder name. -->
+    <AssetUpdates id="-1" version="1.0" provider="modworkshop"/>
+    <!--
+        Adds auto update to your mod.
+        id is the ID of your mod found here: http://modwork.shop/14924 our ID is 14924.
+        version is the version of your mod and it must be the same as the site's version. MWS updates don't care about numbers.
+        Read more about the module > https://github.com/simon-wh/PAYDAY-2-BeardLib/wiki/ModAssetModule
+    -->
+
+    <Localization directory="loc">
+        <loc language="english" file="english.yaml"/>
+    </Localization>
+    <!-- For adding more languages, read > https://github.com/simon-wh/PAYDAY-2-BeardLib/wiki/LocalizationModule -->
+</mod>

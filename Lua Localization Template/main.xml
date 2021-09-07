@@ -9,7 +9,7 @@
     -->
 
     <Localization directory="loc">
-        <loc file="english.lua"/>
+        <loc language="english" file="english.lua"/>
     </Localization>
     <!-- For adding more languages, read > https://github.com/simon-wh/PAYDAY-2-BeardLib/wiki/LocalizationModule -->
 </mod>

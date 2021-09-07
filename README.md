@@ -2,7 +2,7 @@
 Templates for creating bunch of mods using the power of BeardLib!
 
 ## 3 Localization Types
-BeardLib used JSON for localization since forever, but JSON posed a few issues for people that liked to edit it by hand. It's not very friendly, it's strict and hard to write multiline with it. These things are fixed in JSON5, but unfortunately there's no Lua package to add JSON5 as of it.
+BeardLib used JSON for localization since forever, but JSON posed a few issues for people that liked to edit it by hand. It's not very friendly, it's strict and hard to write multilines with it. These things are fixed in JSON5, but unfortunately there's no Lua package to add JSON5 as of it.
 
 Then at a later point BeardLib added YAML, I decided to use it for BeardLib's own localization files. YAML is mostly fine for localization and is friendlier.
 

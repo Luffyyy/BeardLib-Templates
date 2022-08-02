@@ -24,6 +24,7 @@
 	<!-- What adds the part. Read more here > https://github.com/simon-wh/PAYDAY-2-BeardLib/wiki/WeaponModModule -->
 	<AddFiles directory="assets">
 		<df_nm_cc path="units/mods/weapons/wpn_upg_o_YOUR_SIGHT_NAME/docter"/>
+		<texture path="units/mods/weapons/wpn_upg_o_YOUR_SIGHT_NAME/lens_glass_df"/>
 		<df_nm_cc path="units/mods/weapons/wpn_upg_o_YOUR_SIGHT_NAME/mount"/>
 
 		<unit_mat_cc path="units/mods/weapons/wpn_upg_o_YOUR_SIGHT_NAME/wpn_upg_o_YOUR_SIGHT_NAME"/>

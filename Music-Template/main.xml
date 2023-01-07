@@ -1,0 +1,50 @@
+<mod name="YOUR_MOD_NAME" author="YOUR_NAME" min_lib_ver="4.4">
+	<!--Mod name can be your folder name. You should define it; so other mods can easily find your mod. -->
+	<AssetUpdates id="-1" version="1.0" provider="modworkshop"/>
+	<!--
+		Adds auto update to your mod.
+		id is the ID of your mod found here: https://modworkshop.net/mod/14924 our ID is 14924.
+		version is the version of your mod and it must be the same as the site's version. MWS updates don't care about numbers.
+		Read more about the module > https://luffyyy.gitbook.io/beardlib/modules/modassetmodule
+	-->
+	<Localization directory="loc" default="english.txt">
+		<loc file="english.txt" language="english"/>
+	</Localization>
+	<!-- For adding more languages, read > https://luffyyy.gitbook.io/beardlib/modules/localizationmodule -->
+	<HeistMusic id="YOUR_MUSIC_NAME_HEIST" directory="assets/sounds" volume="1">
+		<event name="setup" source="stealth.ogg" start_source="stealth_intro.ogg"/>
+		<event name="control" source="control.ogg" start_source="control_intro.ogg"/>
+		<event name="anticipation" source="anticipation.ogg" start_source="anticipation_intro.ogg"/>
+		<event name="assault">
+			<track source="assault.ogg" start_source="assault_intro.ogg" weight="10"/>
+			<track source="assault_alternate.ogg" start_source="assault_intro.ogg" weight="1"/>
+		</event>
+    </HeistMusic>
+	<!--
+		Module for adding heist (regular loud/stealth) tracks. You need all 4 events -
+		setup AKA stealth, control, anticipation AKA buildup, and assault. For each event, 
+		source is the part that loops and start_source is an optional part that plays once at the start of the event.
+		For alternate events, you can have multiple tracks in one event with different weights. The current assault is 10:1,
+		meaning that the alternate assault has a 10% chance to play.
+		All sound files must be of .ogg (Ogg Vorbis) format.
+		Read more about the module here -> https://luffyyy.gitbook.io/beardlib/modules/heistmusicmodule
+	-->
+	<StealthMusic id="YOUR_MUSIC_NAME_STEALTH" directory="assets/sounds" volume="1">
+		<event name="suspense_1" source="suspense_1.ogg"/>
+		<event name="suspense_2" source="suspense_2.ogg"/>
+		<event name="suspense_3" source="suspense_3.ogg"/>
+		<event name="suspense_4" source="suspense_4.ogg"/>
+		<event name="suspense_5" source="suspense_5.ogg"/>
+	</StealthMusic>
+	<!--
+		Module for adding stealth-only tracks. You need at least suspense_1 and suspense_5 events.
+		Event 1 plays at the start, event 2-4 are triggered through level element logic, and suspense_5 plays during Point Of No Return.
+		All sound files must be of .ogg (Ogg Vorbis) format.
+	-->
+	<MenuMusic id="YOUR_MUSIC_NAME_MENU" source="assets/sounds/menu.ogg" start_source="assets/sounds/menu_intro.ogg" volume="1"/>
+	<!--
+		Module for adding menu tracks. Source is the part that loops and start_source is an optional part that plays once at the start.
+		All sound files must be of .ogg (Ogg Vorbis) format.
+		Read more here > https://luffyyy.gitbook.io/beardlib/modules/menumusicmodule
+	-->
+</mod>

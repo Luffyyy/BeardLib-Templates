@@ -1,0 +1,8 @@
+{
+	"menu_jukebox_YOUR_MUSIC_NAME_HEIST" : "Heist Music track name",
+	"menu_jukebox_screen_YOUR_MUSIC_NAME_HEIST" : "Heist Music track name",
+	"menu_jukebox_YOUR_MUSIC_NAME_STEALTH" : "Stealth Music track name",
+	"menu_jukebox_screen_YOUR_MUSIC_NAME_STEALTH" : "Stealth Music track name",
+	"menu_jukebox_YOUR_MUSIC_NAME_MENU" : "Menu Music track name",
+	"menu_jukebox_screen_YOUR_MUSIC_NAME_MENU" : "Menu Music track name"
+}
